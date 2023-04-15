@@ -1,5 +1,7 @@
 #include <iostream>
+#include <string>
 #include "ReportedUsersEntity.h"
+#include "Post Class.h"
 using namespace std;
 class PostInteraction
 {
@@ -19,25 +21,34 @@ inline void PostInteraction::postInteraction2()
 		reportedUser.writeReportedUser();
 	}
 	else if (choice == 2)
-	{
-		/* if profileClass.profileType == "admin";
-		printFile();
-	    else
+	{	
+		/* if profileClass.profileType == "admin"; */
+		ReportedUsers reportedUser;
+		reportedUser.printFile();
+	    /*
+		else
 		display profile type is set to userand does not have permission to
-		reported user*/
+		reported user
+		*/
 	}
 	else if (choice == 3)
 	{
-		//likePost();
+		//idk what to really do here maybe add post to a 'liked post file'?
+		PostClass PC;
+		PC.likePost();
 	}
 	else if (choice == 4)
 	{
-		/*
-		Display << “enter what will be posted\n”;
-		Get >> user_input;
-		setTypedContent(user_input);
-		makePost();
-		*/
+		string content;
+		PostClass PC;
+		cout << "What would you like to title the post? \n";
+		cin.ignore();
+		getline(cin, content);
+		PC.setPostTitle(content);
+		cout << "Enter what will be posted: \n";
+		getline(cin, content);
+		PC.setTypedContent(content);
+		PC.makePost();
 	}
 	else if (choice == 5)
 	{

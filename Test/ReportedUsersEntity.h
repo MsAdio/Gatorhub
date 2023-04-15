@@ -39,6 +39,7 @@ inline void ReportedUsers::writeReportedUser()
 	string name;
 	cout << "Enter the name of the user: ";
 	cin >> name;
-	reportedUsersFile << name << endl;
+	setReportedUser(name);
+	reportedUsersFile << getReportedUser() << endl;
 	reportedUsersFile.close();
 }

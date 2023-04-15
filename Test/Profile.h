@@ -246,13 +246,12 @@ inline void Profile::updateResume()
 inline void Profile::printAll()
 {
 	cout << "User Profile: \n";
-	cout << "Name " << getFname() << "\n";
-	cout << getLname() << "\n";
-	cout << getBirthday() << "\n";
-	cout << getPersonalStatement() << "\n";
-	cout << getClubs() << "\n";
-	cout << getSkills() << "\n";
-	cout << getClassification() << "\n";
-	cout << getMajor() << "\n";
-	cout << getProspectiveIndustry() << "\n";
+	cout << "Name: " << getFname() << " " << getLname() << "\n";
+	cout << "Birthday: " << getBirthday() << "\n";
+	cout << "About: " << getPersonalStatement() << "\n";
+	cout << "Clubs: " << getClubs() << "\n";
+	cout << "Skills: " << getSkills() << "\n";
+	cout << "Classification: " << getClassification() << "\n";
+	cout << "Major: " << getMajor() << "\n";
+	cout << "Prospective industry: " << getProspectiveIndustry() << "\n";
 }

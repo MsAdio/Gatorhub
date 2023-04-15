@@ -29,9 +29,15 @@
     <ClInclude Include="Profile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Post Class.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Reported User List.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Post File.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
