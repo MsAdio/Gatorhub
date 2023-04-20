@@ -1,5 +1,6 @@
 #include <stdlib.h>	//header file to clear screen
 #include "PostInteract.h"
+#include "Manage Profile.h"
 class UserInterface
 {
 public:
@@ -35,22 +36,26 @@ void UserInterface::displayPost()
 	//display "post" over a popup
 	//await user input
 }
-void UserInterface::displayHomeScreen()
+void UserInterface::displayHomeScreen() //first thing users sees
 {
 	int choice;
-	cout << "User Menu\n";
-	cout << "1. See Profile\n";
+	cout << "======Home Screen======\n";
+	cout << "1. Profile Settings\n";
 	cout << "2. View Friends\n";
 	cout << "3. Create a Post\n";
+	cout << "=======================\n";
 	cin >> choice;
-	if (choice == 3)
+	if (choice == 1)
+	{
+		ManageProfile mp;
+		mp.manageProfile();
+	}
+	else if (choice == 3)
 	{
 		PostInteraction postcontrol;
-		postcontrol.postInteraction2();
-
+		postcontrol.postInteraction();
 	}
-	//display home screen over a popup
-	//await user input
+	
 }
 void UserInterface::displayAdminMenu()
 {

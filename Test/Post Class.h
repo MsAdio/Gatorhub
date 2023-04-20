@@ -16,16 +16,16 @@ public:
 	
 	int getLikes();
 
-	string getPostTitle();
+	string getPostTitle();	//get user inputted title
 	void setPostTitle(string);
-	void updateContent();
-	void likePost();
-	void makePost();
-	void deletePost();
-	void printPost();
+	void updateContent();	//change post
+	void likePost();		//like post
+	void makePost();		//create a post
+	void deletePost();		//delete post
+	void printPost();		//display post
 	PostClass()
 	{
-		likes = 0;
+		likes = 0;	//post create have 0 likes to start
 	}
 };
 inline string PostClass::getTypedContent()

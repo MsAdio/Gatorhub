@@ -133,6 +133,7 @@
     <ClCompile Include="UserInter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Manage Profile.h" />
     <ClInclude Include="Post Class.h" />
     <ClInclude Include="Profile.h" />
     <ClInclude Include="ReportedUsersEntity.h" />

@@ -23,7 +23,7 @@ public:
 	void setFname(string);
 
 	string getLname();
-	void setlName(string);
+	void setLname(string);
 
 	string getSkills(); 
 	void setSkills(string);
@@ -54,7 +54,8 @@ public:
 
 	void readResume();
 
-	void updateName();
+	void updateFname();
+	void updateLname();
 	void updatePersonalStatement();
 	void updateClubs();
 	void updateSkills();
@@ -62,7 +63,10 @@ public:
 	void updateMajor();
 	void updateResume();
 	void updateProspectiveIndustry();
+	void updateUsername();
+	void updatePassword();
 
+	void setupProfile();
 	void printAll();
 };
 inline string Profile::getProfileType() 
@@ -98,7 +102,7 @@ inline string Profile::getLname()
 {
 	return lName;
 }
-inline void Profile::setlName(string c)
+inline void Profile::setLname(string c)
 {
 	lName = c;
 }
@@ -183,13 +187,37 @@ inline void Profile::setProspectiveIndustry(string l)
 {
 	prospectiveIndustry = l;
 }
-inline void Profile::updateName()
+inline void Profile::updateFname()
 {
 	string changeFname;
 	cout << getFname() << "\n";
 	cout << "What would you like to change your first name to?\n";
 	cin >> changeFname;
 	setFname(changeFname);
+}
+inline void Profile::updateLname()
+{
+	string changeLname;
+	cout << getLname() << "\n";
+	cout << "What would you like to change your last name to?\n";
+	cin >> changeLname;
+	setLname(changeLname);
+}
+inline void Profile::updatePassword()
+{
+	string changePassword;
+	cout << getPassword() << "\n";
+	cout << "What would you like to change your password to?\n";
+	cin >> changePassword;
+	setPassword(changePassword);
+}
+inline void Profile::updateUsername()
+{
+	string changeUsername;
+	cout << getUsername() << "\n";
+	cout << "What would you like to change your username to?\n";
+	cin >> changeUsername;
+	setUsername(changeUsername);
 }
 inline void Profile::updatePersonalStatement()
 {
@@ -245,7 +273,7 @@ inline void Profile::updateResume()
 }
 inline void Profile::printAll()
 {
-	cout << "User Profile: \n";
+	cout << "\n====== User Profile ======\n";
 	cout << "Name: " << getFname() << " " << getLname() << "\n";
 	cout << "Birthday: " << getBirthday() << "\n";
 	cout << "About: " << getPersonalStatement() << "\n";
@@ -254,4 +282,16 @@ inline void Profile::printAll()
 	cout << "Classification: " << getClassification() << "\n";
 	cout << "Major: " << getMajor() << "\n";
 	cout << "Prospective industry: " << getProspectiveIndustry() << "\n";
+	cout << "==========================\n";
+}
+inline void Profile::setupProfile()
+{
+	updateFname();
+	updateLname();
+	updatePersonalStatement();
+	updateClubs();
+	updateSkills();
+	updateClassification();
+	updateMajor();
+	updateProspectiveIndustry();
 }

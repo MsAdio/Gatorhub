@@ -6,25 +6,25 @@ using namespace std;
 class PostInteraction
 {
 public:
-	void postInteraction2();
+	void postInteraction();	//users can like, report, create, delete, or display post
 };
-inline void PostInteraction::postInteraction2()
+inline void PostInteraction::postInteraction()
 {
 	int choice;
+	ReportedUsers reportedUser;
+	PostClass PC;
 	cout << "1. Report User\n2. View Reported Users List\n"
 		<< "3. Like Post\n4. Create a Post\n5. Delete Post\n"
 		<< "6. Display Post\n";
 	cin >> choice;
 	if (choice == 1)
 	{
-		ReportedUsers reportedUser;
-		reportedUser.writeReportedUser();
+		reportedUser.writeReportedUser();	//Write user in file
 	}
 	else if (choice == 2)
 	{	
 		/* if profileClass.profileType == "admin"; */
-		ReportedUsers reportedUser;
-		reportedUser.printFile();
+		reportedUser.printFile();			//Display reported users
 	    /*
 		else
 		display profile type is set to userand does not have permission to
@@ -35,12 +35,11 @@ inline void PostInteraction::postInteraction2()
 	{
 		//idk what to really do here maybe add post to a 'liked post file'?
 		PostClass PC;
-		PC.likePost();
+		PC.likePost();		//like the post
 	}
 	else if (choice == 4)
 	{
 		string content;
-		PostClass PC;
 		cout << "What would you like to title the post? \n";
 		cin.ignore();
 		getline(cin, content);
@@ -48,7 +47,7 @@ inline void PostInteraction::postInteraction2()
 		cout << "Enter what will be posted: \n";
 		getline(cin, content);
 		PC.setTypedContent(content);
-		PC.makePost();
+		PC.makePost();		//create post
 	}
 	else if (choice == 5)
 	{

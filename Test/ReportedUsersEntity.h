@@ -5,14 +5,14 @@ using namespace std;
 class ReportedUsers
 {
 private:
-	string reportedUsers;
-	fstream reportedUsersFile;
+	string reportedUsers;		//holds reported user name
+	fstream reportedUsersFile;	//hold names of reported users
 
 public:
 	void setReportedUser(string);
 	string getReportedUser() const;
-	void printFile();
-	void writeReportedUser();
+	void printFile();			//Display reported users names
+	void writeReportedUser();	//Write reported users into file
 };
 inline void ReportedUsers::setReportedUser(string a)
 {
