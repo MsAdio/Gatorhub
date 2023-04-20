@@ -1,3 +1,9 @@
+/*
+Name: Reported Users Class
+Desciption: Stores reported post in a file titled Reported User List.txt
+Date Coded: April 15 -
+Who contributed: Brendan 
+*/
 #include <iostream>
 #include <fstream>
 #include <string>

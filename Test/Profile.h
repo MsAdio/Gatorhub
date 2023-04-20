@@ -1,4 +1,14 @@
+/*
+Name: Profile Class
+Desciption: Stpres users profile type, first name, last name, skills,
+			username, password, birthday, person statement, clubs,
+			classification, major, and prospective industry. Users
+			can display profile information and update them as well.
+Date Coded: April 15 -
+Who contributed: Brendan
+*/
 #include <iostream>
+#include <string>
 using namespace std;
 class Profile
 {
@@ -191,48 +201,54 @@ inline void Profile::updateFname()
 {
 	string changeFname;
 	cout << getFname() << "\n";
+	cin.ignore();
 	cout << "What would you like to change your first name to?\n";
-	cin >> changeFname;
+	getline(cin, changeFname);
 	setFname(changeFname);
 }
 inline void Profile::updateLname()
 {
 	string changeLname;
 	cout << getLname() << "\n";
+	cin.ignore();
 	cout << "What would you like to change your last name to?\n";
-	cin >> changeLname;
+	getline(cin, changeLname);
 	setLname(changeLname);
 }
 inline void Profile::updatePassword()
 {
 	string changePassword;
 	cout << getPassword() << "\n";
+	cin.ignore();
 	cout << "What would you like to change your password to?\n";
-	cin >> changePassword;
+	getline(cin, changePassword);
 	setPassword(changePassword);
 }
 inline void Profile::updateUsername()
 {
 	string changeUsername;
 	cout << getUsername() << "\n";
+	cin.ignore();
 	cout << "What would you like to change your username to?\n";
-	cin >> changeUsername;
+	getline(cin, changeUsername);
 	setUsername(changeUsername);
 }
 inline void Profile::updatePersonalStatement()
 {
 	string changePS;
 	cout << getPersonalStatement() << "\n";
+	cin.ignore();
 	cout << "What would you like to change your personal statement to?\n";
-	cin >> changePS;
+	getline(cin, changePS);
 	setPersonalStatement(changePS);
 }
 inline void Profile::updateClubs()
 {
 	string changeClubs;
 	cout << getClubs() << "\n";
+	cin.ignore();
 	cout << "What would you like to change your clubs to?\n";
-	cin >> changeClubs;
+	getline(cin, changeClubs);
 	setClubs(changeClubs);
 }
 inline void Profile::updateSkills()
@@ -240,7 +256,8 @@ inline void Profile::updateSkills()
 	string changeSkills;
 	cout << getSkills() << "\n";
 	cout << "What would you like to change your skills to?\n";
-	cin >> changeSkills;
+	getline(cin, changeSkills);
+	cin.ignore();
 	setSkills(changeSkills);
 }
 inline void Profile::updateClassification()
@@ -248,7 +265,8 @@ inline void Profile::updateClassification()
 	string changeClassification;
 	cout << getClassification() << "\n";
 	cout << "What would you like to change your classification to?\n";
-	cin >> changeClassification;
+	getline(cin, changeClassification);
+	cin.ignore();
 	setClassification(changeClassification);
 }
 inline void Profile::updateMajor()
@@ -256,7 +274,8 @@ inline void Profile::updateMajor()
 	string changeMajor;
 	cout << getMajor() << "\n";
 	cout << "What would you like to change your major to?\n";
-	cin >> changeMajor;
+	getline(cin, changeMajor);
+	cin.ignore();
 	setMajor(changeMajor);
 }
 inline void Profile::updateProspectiveIndustry()
@@ -264,7 +283,8 @@ inline void Profile::updateProspectiveIndustry()
 	string changePI;
 	cout << getProspectiveIndustry() << "\n";
 	cout << "What would you like to change your prospective industry to?\n";
-	cin >> changePI;
+	getline(cin, changePI);
+	cin.ignore();
 	setProspectiveIndustry(changePI);
 }
 inline void Profile::updateResume()
@@ -274,7 +294,7 @@ inline void Profile::updateResume()
 inline void Profile::printAll()
 {
 	cout << "\n====== User Profile ======\n";
-	cout << "Name: " << getFname() << " " << getLname() << "\n";
+	cout << "Name: " << fName << " " << lName << "\n";
 	cout << "Birthday: " << getBirthday() << "\n";
 	cout << "About: " << getPersonalStatement() << "\n";
 	cout << "Clubs: " << getClubs() << "\n";
@@ -282,7 +302,7 @@ inline void Profile::printAll()
 	cout << "Classification: " << getClassification() << "\n";
 	cout << "Major: " << getMajor() << "\n";
 	cout << "Prospective industry: " << getProspectiveIndustry() << "\n";
-	cout << "==========================\n";
+	cout << "==========================\n\n";
 }
 inline void Profile::setupProfile()
 {
@@ -294,4 +314,5 @@ inline void Profile::setupProfile()
 	updateClassification();
 	updateMajor();
 	updateProspectiveIndustry();
+	printAll();
 }

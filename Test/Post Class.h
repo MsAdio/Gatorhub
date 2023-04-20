@@ -1,4 +1,13 @@
+/*
+Name: Post Class
+Desciption: Stores users post in Post File.txt where the user can 
+			like, report, or delete the post
+			
+Date Coded: April 15 -
+Who contributed: Brendan
+*/
 #include <iostream>
+#include <string>
 #include <fstream>
 #include <string>
 using namespace std;
@@ -11,19 +20,20 @@ private:
 	fstream postFile;
 
 public:
-	string getTypedContent();
-	void setTypedContent(string);
+	string getTypedContent();		//holds post info
+	void setTypedContent(string);	//sets post info
 	
-	int getLikes();
+	int getLikes();			//return the amount of likes on post
 
-	string getPostTitle();	//get user inputted title
-	void setPostTitle(string);
+	string getPostTitle();		//returns the title of the post
+	void setPostTitle(string);	//sets post title
+
 	void updateContent();	//change post
 	void likePost();		//like post
 	void makePost();		//create a post
 	void deletePost();		//delete post
 	void printPost();		//display post
-	PostClass()
+	PostClass()				//creating a post automatically starts with 0 likes
 	{
 		likes = 0;	//post create have 0 likes to start
 	}
@@ -51,8 +61,9 @@ inline void PostClass::setPostTitle(string b)
 inline void PostClass::updateContent()
 {
 	string changeContent;
+	cin.ignore();
 	cout << getTypedContent() << "\n";
-	cin >> changeContent;
+	getline(cin, changeContent);
 	setTypedContent(changeContent);
 }
 inline void PostClass::likePost()
