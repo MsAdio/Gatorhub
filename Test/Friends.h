@@ -1,16 +1,17 @@
 #include <vector>
 #include <string>
+using namespace std;
 
 class Friend {
 private:
-  std::string name;
+  string name;
   int age;
-  std::string city;
+  string city;
 public:
-  Friend(std::string n, int a, std::string c) : name(n), age(a), city(c) {}
-  std::string getName() const { return name; }
+  Friend(string n, int a, string c) : name(n), age(a), city(c) {}
+  string getName() const { return name; }
   int getAge() const { return age; }
-  std::string getCity() const { return city; }
+  string getCity() const { return city; }
 };
 
 class Friends {

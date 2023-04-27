@@ -1,7 +1,9 @@
 #include <vector>
 #include <string>
+#include <Friends.h>
 
-class Friends {
+
+class manageFriends {
 private:
   std::vector<Friend> friendsList;
 public:
