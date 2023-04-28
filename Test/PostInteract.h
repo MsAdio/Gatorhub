@@ -61,18 +61,19 @@ inline void PostInteraction::postInteraction()
 	}
 	else if (choice == 5)
 	{
-		/*
-		Display << “enter the post title\n;
-		Get >> user_input
-			deletePost(user_input);
-		*/
+		string postTitle;
+		cout<<"Enter the post title:";
+		cin>>postTitle;
+
+		PC.deletePost();
+
 	}
 	else if (choice == 6)
 	{
-		/*
-		Display << “enter the post title\n;
-		printPost(user_input);
-		*/
+		string postTitle;
+		cout<<"Enter the post title that you would like to see:";
+		cin>>postTitle;
+		PC.printPost();
 	}
 	else
 	{
