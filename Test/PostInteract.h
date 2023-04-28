@@ -2,8 +2,8 @@
 Name: Post Interaction Class
 Desciption: User can like, report, create, delete, or display post by 
 			searching its title
-Date Coded: April 15 -
-Who contributed: Brendan
+Date Coded: April 28
+Who contributed: Brendan, Evy
 */
 #include <iostream>
 #include <string>
