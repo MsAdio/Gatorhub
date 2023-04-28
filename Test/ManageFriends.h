@@ -25,12 +25,9 @@ if(selection ==1)
  
  cout<<"Who would like to send a friend request to?";
  cin>>friendName;
-
-    addFriend(friendName);
-    void addFriend(vector<string> &friendsList, string friendName) 
-    {
+ 
     friendsList.push_back(friendName);
-    }
+   
 }
 
 if(selection==2)
@@ -38,11 +35,8 @@ if(selection==2)
     cout<<"What friend would you to remove from the list?";
  cin>>friendName;
 
-    removeFriend(friendName);
-    void removeFriend(vector<string> &friendsList, string friendName) 
-    {
     friendsList.erase(remove(friendsList.begin(), friendsList.end(), friendName), friendsList.end());
-    }
+    
 }
 
 if(selection ==3)
