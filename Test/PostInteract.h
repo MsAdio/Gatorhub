@@ -36,11 +36,18 @@ inline void PostInteraction::postInteraction()
 	else if (choice == 2)
 	{	
 		/* if profileClass.profileType == "admin"; */
-		reportedUser.printFile();			//Display reported users
-	    /*
+		string answer;
+		cout<<"To view the list of reported users, you need to be an administrator. \nAre you an administrator?\nType \"yes\" if you are.";
+		cin>>answer;
+		if(answer == "yes")
+		{
+		reportedUser.printFile();	//Display reported users
+		}		
+	    
 		else
-		Diplay "Only admins have permission or function
-		*/
+		{
+			cout<<"Only administrators can view the list of reported users.";
+		}
 	}
 	else if (choice == 3)
 	{
