@@ -16,30 +16,30 @@ public:
 
 class Friends {
 private:
-  std::vector<Friend> friendsList;
+  vector<Friend> friendsList;
 public:
-  void addFriend(std::string name, int age, std::string city) {
+  void addFriend(string name, int age, string city) {
     Friend newFriend(name, age, city);
     friendsList.push_back(newFriend);
   }
-  std::vector<Friend> getFriends() const {
+  vector<Friend> getFriends() const {
     return friendsList;
   }
-  std::vector<Friend> getFriendsInCity(std::string city) const {
-    std::vector<Friend> friendsInCity;
-    for (const Friend& friend : friendsList) {
-      if (friend.getCity() == city) {
-        friendsInCity.push_back(friend);
+  vector<Friend> getFriendsInCity(string city) const {
+    vector<Friend> friendsInCity;
+    for (const Friend& Friend : friendsList) {
+      if (Friend.getCity() == city) {
+        friendsInCity.push_back(Friend);
       }
     }
     return friendsInCity;
   }
-  std::vector<Friend> getFriendsInRange(int minAge, int maxAge) const {
-    std::vector<Friend> friendsInRange;
-    for (const Friend& friend : friendsList) {
-      int age = friend.getAge();
+  vector<Friend> getFriendsInRange(int minAge, int maxAge) const {
+   vector<Friend> friendsInRange;
+    for (const Friend& Friend : friendsList) {
+      int age = Friend.getAge();
       if (age >= minAge && age <= maxAge) {
-        friendsInRange.push_back(friend);
+        friendsInRange.push_back(Friend);
       }
     }
     return friendsInRange;
